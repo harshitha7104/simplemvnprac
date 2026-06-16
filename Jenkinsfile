@@ -4,13 +4,13 @@ tools{
 mavn 'Maven'
 }
 stages{
-stage{
-steps('Checkout'){
+stage('Checkout'){
+steps{
 checkout scm}}
-stage{
-steps('Build & Test'){
+stage('Build & Test'){
+steps{
 sh 'mvn clean install'}}
-stage{
-steps('Run Appplication'){
+stage('Run Appplication'){
+steps{
 sh 'java -jar target/simplemvnprac-1.0-SNAPSHOT.jar'}}
 }}
